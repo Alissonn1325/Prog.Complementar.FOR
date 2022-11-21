@@ -8,10 +8,12 @@
 
     //ENTRADA
 
+    const valorInvestido = 10000;
+    let meses = 0;
 
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
-    
+    for (let meses = 1; 300 <= valorInvestido; meses++) {
+        valorInvestido = valorInvestido - 300;
+        valorInvestido = valorInvestido * 1.03;
+    }
+    document.write(`A Pessoa Terá Gasto O Valor Investido Em ${meses} Meses!`)
 </script>

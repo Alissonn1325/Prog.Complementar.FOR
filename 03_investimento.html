@@ -9,10 +9,28 @@
 
     //ENTRADA
 
+    let valorInvestido = 0;
+    let valorInvestido24Meses = 0;
+    let valorInvestido48Meses = 0;
+    let valorInvestido96Meses = 0;
 
-    //PROCESSAMENTO
+    for (let meses = 1; meses <= 96; meses++) {
+        valorInvestido = valorInvestido + 100;
+        valorInvestido = valorInvestido * 1.018;
 
-    
-    //SAÍDA
-    
+        if (meses === 24) {
+            valorInvestido24Meses = valorInvestido;
+            rendimento24Meses = valorInvestido - 2400;
+        }
+        if (meses === 48) {
+            valorInvestido48Meses = valorInvestido;
+            rendimento48Meses = valorInvestido - 4800 -rendimento24Meses;
+        }
+        if (meses === 96) {
+            valorInvestido48Meses = valorInvestido;
+            rendimento96Meses = valorInvestido - 9600 - rendimento24Meses - rendimento48Meses;
+    }
+}
+
+document.write(`24 Meses: R$: ${valorInvestido24Meses.toFixed(2)} <br> 48 Meses: R$: ${valorInvestido48Meses.toFixed(2)} <br> 96 Meses: R$: ${valorInvestido96Meses.toFixed(2)} <br> Lucros em 24 Meses: R$: ${rendimento24Meses.toFixed(2)} <br> Lucros em 48 Meses: R$: ${rendimento48Meses.toFixed(2)} <br> Lucros em 96 Meses: R$: ${rendimento96Meses.toFixed(2)}`)
 </script>

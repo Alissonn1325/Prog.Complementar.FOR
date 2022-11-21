@@ -14,15 +14,26 @@
     Após o usuário informar a quantia vendida para cada item, calcule e apresente o faturamento do feirante.
     */
 
-    //ENTRADA
 
-    let listaDeItens = ["Tomate", "Batata", "BatataDoce", "Alface", "Cebola", "Cebolinha", "Beterraba"];
-    let tomate = [];
-    let batata = [];
-    let batataDoce = [];
-    let alface = [];
-    let cebola = [];
-    let cebolinha = [];
-    let beterraba = [];
-    
+    const batata = parseInt(prompt("Quantos você vendeu de Batata?"));
+    const batataDoce = parseInt(prompt("Quantos você vendeu de Batata Doce?"));
+    const tomate = parseInt(prompt("Quantos você vendeu de Tomate?"));
+    const alface = parseInt(prompt("Quantos você vendeu de Alface?"));
+    const cebola = parseInt(prompt("Quantos você vendeu de Cebola?"));
+    const cebolima = parseInt(prompt("Quantos você vendeu de Cebolinha?"));
+    const beterraba = parseInt(prompt("Quantos você vendeu de Beterraba?"));
+
+    const batataCal = batata * 3.40;
+    const batataDoceCal = batataDoce * 4.70;
+    const tomateCal = tomate * 3.90;
+    const alfaceCal = clface * 1.50;
+    const cebolaCal = cebola * 2.90;
+    const cebolimaCal = cebolima * 1.40;
+    const beterrabaCal = beterraba * 4.10;
+
+    const somaTotal = batataCal + batataDoceCal + tomateCal + alfaceCal + cebolaCal + cebolimaCal + beterrabaCal;
+
+
+    document.write(`Faturamento Do Tomate: ${tomateCal.toFixed(2)}R$ <br> Faturamento Do Batata: ${batataCal.toFixed(2)}R$ <br> Faturamento Do Alface: ${alfaceCal.toFixed(2)}R$ <br> Faturamento Do Cebola: ${cebolaCal.toFixed(2)}R$ <br> Faturamento Do Cebolinha: ${cebolimaCal.toFixed(2)}R$ <br> Faturamento Do Beterraba: ${beterrabaCal.toFixed(2)}R$ <br> Soma Total Dos Itens: ${somaTotal.toFixed(2)} R$.`)
+
 </script>

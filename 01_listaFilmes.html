@@ -18,8 +18,8 @@
     for (let contador = 1; contador <= filmesCadastrar; contador++) {
         let nomeFilme = prompt(`Informe o nome do filme ${contador} de ${filmesCadastrar}:`);
         let generoFilme = prompt(`Qual o gênero do filme ${nomeFilme}? (C-Comédia | D-Drama | R-Romance)`).toUpperCase();
-        if (generoFilme === "C") comedia.push(nomeFilme)
-        else if (generoFilme === "D") drama.push(nomeFilme)
+        if (generoFilme === "C") comedia.push(nomeFilme);
+        else if (generoFilme === "D") drama.push(nomeFilme);
         else if (generoFilme === "R") romance.push(nomeFilme);
     }
     

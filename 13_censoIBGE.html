@@ -11,12 +11,33 @@
     - Percentual de famílias com salário até R$ 3.000,00
     */
 
-    //ENTRADA
+    let salarios = [1200, 2500, 3000, 9000, 850, 4000, 1500, 2300, 3800, 1600];
 
+    let numeroDeFilhos = [1, 2, 2, 1, 3, 2, 3, 3, 0, 4];
 
-    //PROCESSAMENTO
+    let totalSalario = 0;
+    let totalFilhos = 0;
+    let mediaSalario = 0;
+    let mediaFilhos = 0;
+    let maiorSalario = 0;
+    let salariosAte3000 = 0;
 
-    
-    //SAÍDA
+    for (const salario of salarios) {
+        totalSalario = totalSalario + salario
+        if (salario <= 3000) {
+            salariosAte3000++;
+            
+        }
+    }
+    mediaSalario = totalSalario / salarios.length;
+    maiorSalario = salarios.sort((a, b) => b - a)[0];
+    mediaFilhos = mediaFilhos / numeroDeFilhos.length
+    let percentualAte3000 = salariosAte3000 / salarios.length * 100;
 
+    for (const filhos of numeroDeFilhos) {
+        totalFilhos = totalFilhos + filhos;
+    }
+    mediaNumeroFilhos = totalFilhos / numeroDeFilhos.length;
+
+    document.write(`Média de Salário: R$ ${mediaSalario.toFixed(2)} <br> Maior Salário: R$ ${maiorSalario.toFixed(2)} <br> Famílias Com Salário Até R$ 3000,00: ${percentualAte3000.toFixed(2)}% <br> Média do Número de Filhos ${mediaNumeroFilhos.toFixed(2)}`)
 </script>

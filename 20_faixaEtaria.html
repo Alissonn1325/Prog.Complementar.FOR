@@ -15,10 +15,25 @@
 
     //ENTRADA
 
+    let pessoas00_15 = [];
+    let pessoas16_30 = [];
+    let pessoas31_45 = [];
+    let pessoas46_60 = [];
+    let pessoas61_999 = [];
 
-    //PROCESSAMENTO
+     for (let contador = 1; contador <= 10; controle++) {
+        let idade = parseInt(prompt(`Digite a Idade da Pessoa: ${contador}`));
 
-    
-    //SAÍDA
-
+        if (idade <= 15) pessoas00_15.push(idade);
+        else if (idade <= 30) pessoas16_30.push(idade);
+        else if (idade <= 45) pessoas31_45.push(idade);
+        else if (idade <= 60) pessoas46_60.push(idade)
+        else pessoas61_999.push(idade);
+     }
+      
+    document.write(`${pessoas00_15.length} Possuem Até 15 Anos ${(pessoas00_15.length / 10 * 100)}%`)
+    document.write(`${pessoas16_30.length} Possuem De 16 Até 30 Anos ${(pessoas16_30.length / 10 * 100)}%`)
+    document.write(`${pessoas31_45.length} Possuem De 31 Até 45 Anos ${(pessoas31_45.length / 10 * 100)}%`)
+    document.write(`${pessoas46_60.length} Possuem De 46 Até 60 Anos ${(pessoas46_60.length / 10 * 100)}%`)
+    document.write(`${pessoas61_999.length} Possuem Acima De 61 Anos ${(pessoas61_999.length / 10 * 100)}%`)
 </script>

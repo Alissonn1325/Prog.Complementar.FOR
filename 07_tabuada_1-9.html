@@ -8,10 +8,14 @@
 
     let tabuada = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-    for (const numero of tabuada) {
-        alert(` ${numero}`);
+    for (multiplacando of tabuada) {
+        document.write(`Tabuada do ${multiplacando} </br>`)
+        for (let multiplacador = 1; multiplacador <= 10; multiplacador++) {
+
+            document.write(`${multiplacando} x ${multiplacador} = ${multiplacando * multiplacador} </br>`)
+        }
+        document.write(`</br>`)
     }
-    document.write(`${tabuada.join(" - ")}`);
 
    
 
